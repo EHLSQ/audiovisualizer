@@ -6,24 +6,16 @@ app.get('/', function (req, res) {
   res.sendfile(path.join(__dirname+'/index.html'));
 });
 
-app.get('/navbar.html', function (req, res) {
-  res.sendfile(path.join(__dirname+'/pages/navbar.html'));
-});
-
-app.get('/about.html', function (req, res) {
-  res.sendfile(path.join(__dirname+'/pages/about.html'));
-});
-
-app.get('/audiothree.html', function (req, res) {
-  res.sendfile(path.join(__dirname+'/pages/audiothree.html'));
+app.get('/visualizer.html', function (req, res) {
+  res.sendfile(path.join(__dirname+'/pages/visualizer.html'));
 });
 
 app.get('/audiofiles/Hide.mp3', function (req, res) {
   res.sendfile(path.join(__dirname+'/audiofiles/Hide.mp3'));
 });
 
-app.get('/scripts/audiothree.js', function (req, res) {
-  res.sendfile(path.join(__dirname+'/scripts/audiothree.js'));
+app.get('/scripts/visualizer.js', function (req, res) {
+  res.sendfile(path.join(__dirname+'/scripts/visualizer.js'));
 });
 
 app.listen(3000, function () {
