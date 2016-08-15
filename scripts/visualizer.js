@@ -23,16 +23,16 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 100, 120)';
+  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   var barWidth = (WIDTH / bufferLength) * 5;
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i < bufferLength; i+=3) {
+  for(var i = 0; i < bufferLength; i+=4) {
     barHeight = dataArray[i] * 1;
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+70) + ', ' + (barHeight+70) + ' , 0 )';
+    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ', ' + (barHeight) + ' , 0 )';
     canvasCtx.fillRect(x, HEIGHT-barHeight/2, barWidth, barHeight/2);
 
     x += barWidth + 1;
